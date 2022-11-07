@@ -1,25 +1,28 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { Icon } from '@rneui/themed';
 
 
 export default function NavBar()
 {
     return(
-        <View style={navbarStyle}>
-            <Image source={{ uri:"https://cdn-icons-png.flaticon.com/512/2311/2311531.png"}} />
-            <Text>Loja</Text>
+        <View style={navbarStyle.container}>
             <View>
-                <Image source={{uri:"https://cdn-icons-png.flaticon.com/512/158/158740.png"}} />
-                <Image source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25619.png"}} />
+                <Icon name="menu-outline" type="ionicon" size={ 24 } />
+                <Text>Loja</Text>
+            </View>
+            <View>
+                <Icon name="search-outline" type="ionicon" size={ 24 } />
+                <Icon name="cart" type="ionicon" size={ 24 } />
             </View>
         </View>
     );
 }
 
-
-
-
 const navbarStyle = StyleSheet.create({
-
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    }
 })

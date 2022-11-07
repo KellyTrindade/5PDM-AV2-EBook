@@ -6,7 +6,7 @@ import Item from "../components/Item";
 export default function Home()
 {
     return(
-        <View style={homeStyle}>
+        <View style={homeStyle.container}>
             <NavBar/>
             <View>
                 <Item />
@@ -18,5 +18,9 @@ export default function Home()
 }
 
 const homeStyle = StyleSheet.create({
-    
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 })
